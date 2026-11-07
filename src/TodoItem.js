@@ -1,5 +1,6 @@
 export class TodoItem {
   constructor(title, description, dueDate, priority, notes, checkList) {
+    this.id = crypto.randomUUID();
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
@@ -7,6 +8,4 @@ export class TodoItem {
     this.notes = notes;
     this.checkList = checkList;
   }
-
-  
 }

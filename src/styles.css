@@ -1,0 +1,105 @@
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 300px 1fr;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+  background-color: rgb(243, 243, 243);
+}
+
+.title {
+  display: flex;
+  padding: 20px 30px;
+  gap: 15px;
+}
+
+.logo {
+  width: 32px;
+}
+
+.list-title {
+  padding: 20px 40px;
+}
+
+.default, .lists {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  align-items: stretch;
+}
+
+.list {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin: 0 10px;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list:hover {
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+}
+
+.divider {
+  border: 1px solid gray;
+  margin: 20px 10px;
+}
+
+.lists-header {
+  padding: 10px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lists-header > h3 {
+  color: rgb(83, 83, 83);
+}
+
+.new-list {
+  color: rgb(83, 83, 83);
+  font-size: 24px;
+
+  height: 24px;
+  width: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-list:hover {
+  color: rgb(27, 27, 27);
+  cursor: pointer;
+}

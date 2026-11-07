@@ -5,7 +5,7 @@ export default merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    watchFiles: ["./src/template.html"],
+    watchFiles: ["./src/index.html"],
     static: './dist',
   },
 });
