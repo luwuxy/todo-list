@@ -72,7 +72,7 @@ button {
 
 .divider {
   border: 1px solid gray;
-  margin: 20px 10px;
+  margin: 20px 15px;
 }
 
 .lists-header {
@@ -101,5 +101,86 @@ button {
 
 .new-list:hover {
   color: rgb(27, 27, 27);
+  cursor: pointer;
+}
+
+.modal-bg {
+  background-color: rgba(0, 0, 0, 50%);
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  display: flex;
+}
+
+.list-modal {
+  background-color: white;
+
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.modal-close {
+  cursor: pointer;
+  color: rgb(83, 83, 83);
+  font-size: 20px;
+}
+
+.modal-close:hover {
+  color: rgb(27, 27, 27);
+}
+
+.modal > input[type="text"] {
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal-save {
+  cursor: pointer;
+  align-self: flex-start;
+  background-color: rgb(27, 27, 27);
+  color: white;
+  border-radius: 5px;
+  padding: 7px 12px;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.modal-save:hover {
+  background-color: rgb(54, 54, 54);
+}
+
+.new-task {
+  color: white;
+  background-color: rgb(27, 27, 27);
+  margin-left: 40px;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.new-task:hover {
+  background-color: rgb(54, 54, 54);
   cursor: pointer;
 }

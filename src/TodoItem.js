@@ -1,11 +1,11 @@
 export class TodoItem {
-  constructor(title, description, dueDate, priority, notes, checkList) {
+  constructor(title, description, dueDate, priority, notes, category = "general") {
     this.id = crypto.randomUUID();
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
     this.notes = notes;
-    this.checkList = checkList;
+    this.category = category;
   }
 }
