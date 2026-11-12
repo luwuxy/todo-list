@@ -2,11 +2,22 @@ export class TodoList {
   #todo;
 
   constructor() {
-    this.#todo = [];
+    if (localStorage.getItem("todo") === null) {
+      this.#todo = [];
+    } else {
+      this.#todo = JSON.parse(localStorage.getItem("todo"));
+    }
+
+    // this.#todo = [];
+  }
+
+  saveTodo() {
+    localStorage.setItem("todo", JSON.stringify(this.#todo));
   }
 
   set newTodo(item) {
     this.#todo.push(item);
+    this.saveTodo();
   }
 
   get todo() {
@@ -24,5 +35,7 @@ export class TodoList {
       todo.notes = notes;
       todo.category = category;
     }
+
+    this.saveTodo();
   }
 }
