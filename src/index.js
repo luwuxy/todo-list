@@ -14,6 +14,7 @@ const newTaskInput = document.getElementById('new-task');
 const newTaskBtn = document.querySelector('.new-task-plus');
 const tasks = document.querySelector('.tasks');
 const taskSidebar = document.querySelector('.task-sidebar');
+const taskDeleteBtn = document.querySelector('.task-delete');
 const inbox = document.getElementById('inbox');
 const list = new TodoList();
 const category = ["General"];
@@ -143,6 +144,22 @@ loadAllTodos();
 
 taskSidebar.addEventListener('submit', e => {
   e.preventDefault();
+
+  const taskDivs = document.querySelectorAll('.task');
+
+  if (e.submitter.classList.contains('task-delete')) {
+    list.deleteTodo(e.target.dataset.taskId);
+
+    for (const task of taskDivs) {
+      if (task.dataset.taskId !== e.target.dataset.taskId) continue;
+
+      task.remove();
+    }
+
+    taskSidebar.classList.remove('active');
+
+    return;
+  }
 
   const data = new FormData(e.target);
 

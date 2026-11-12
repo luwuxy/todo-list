@@ -15,6 +15,11 @@ export class TodoList {
     localStorage.setItem("todo", JSON.stringify(this.#todo));
   }
 
+  deleteTodo(itemId) {
+    this.#todo = this.#todo.filter(item => item.id !== itemId);
+    this.saveTodo();
+  }
+
   set newTodo(item) {
     this.#todo.push(item);
     this.saveTodo();
